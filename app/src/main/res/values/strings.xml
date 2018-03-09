@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ScoreCounter</string>
+    <string name="decorative_graphic">decorative graphic</string>
+    <string name="background_graphic">background graphic</string>
+    <string name="home_nstats">HOME\nSTATS</string>
+    <string name="red_card_icon">red card icon</string>
+    <string name="yellow_car_icon">yellow car icon</string>
+    <string name="corner_icon">corner icon</string>
+    <string name="away_nstats">AWAY\nSTATS</string>
+    <string name="corner">corner</string>
+    <string name="red_card">red card</string>
+    <string name="yellow_card">yellow card</string>
+    <string name="goal">goal</string>
+    <string name="reset">reset</string>
+    <string name="home">HOME</string>
+    <string name="away">AWAY</string>
+    <string name="team">TEAM</string>
+    <string name="zero">0</string>
+    <string name="green_background">green background</string>
+    <string name="purple_and_blue_background">purple and blue background</string>
+    <string name="purple_background">purple background</string>
+    <string name="blue_background">blue background</string>
+    <string name="stats">STATS</string>
+    <string name="statsL">STATS</string>
+</resources>

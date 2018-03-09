@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3dba08"
+    tools:context="com.example.android.scorecounter.MainActivity">
+
+    <ImageView
+        android:id="@+id/topGraphic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/decorative_graphic"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/score_keeper_top_shorter_test" />
+
+    <ImageView
+        android:id="@+id/middleGraphic"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="112dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/background_graphic"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topGraphic"
+        app:srcCompat="@drawable/score_keeper_stats_background_test" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/home_nstats"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/middleGraphic" />
+
+    <ImageView
+        android:id="@+id/red_card_home_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/red_card_icon"
+        app:layout_constraintStart_toEndOf="@+id/red_card_home_text"
+        app:layout_constraintTop_toTopOf="@+id/red_card_home_text"
+        app:srcCompat="@drawable/score_keeper_red_card_test" />
+
+    <TextView
+        android:id="@+id/red_card_home_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/middleGraphic" />
+
+    <ImageView
+        android:id="@+id/yellow_card_home_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/yellow_car_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_card_home_text"
+        app:layout_constraintStart_toEndOf="@+id/yellow_card_home_text"
+        app:srcCompat="@drawable/score_keeper_yellow_card_test" />
+
+    <TextView
+        android:id="@+id/yellow_card_home_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/red_card_home_text" />
+
+    <ImageView
+        android:id="@+id/corner_home_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/corner_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_card_home_text"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:srcCompat="@drawable/score_keeper_corner_test" />
+
+    <TextView
+        android:id="@+id/corner_home_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/corner_home_icon"
+        app:layout_constraintEnd_toStartOf="@+id/corner_home_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/away_nstats"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/middleGraphic" />
+
+    <ImageView
+        android:id="@+id/red_card_away_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/red_card_icon"
+        app:layout_constraintStart_toEndOf="@+id/red_card_away_text"
+        app:layout_constraintTop_toTopOf="@+id/red_card_away_text"
+        app:srcCompat="@drawable/score_keeper_red_card_test" />
+
+    <TextView
+        android:id="@+id/red_card_away_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/middleGraphic" />
+
+    <ImageView
+        android:id="@+id/yellow_card_away_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/yellow_car_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_card_away_text"
+        app:layout_constraintStart_toEndOf="@+id/yellow_card_away_text"
+        app:srcCompat="@drawable/score_keeper_yellow_card_test" />
+
+    <TextView
+        android:id="@+id/yellow_card_away_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/red_card_away_text" />
+
+    <ImageView
+        android:id="@+id/corner_away_icon"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/corner_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_card_away_text"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:srcCompat="@drawable/score_keeper_corner_test" />
+
+    <TextView
+        android:id="@+id/corner_away_text"
+        android:layout_width="@dimen/icon_dimension"
+        android:layout_height="@dimen/icon_dimension"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/icon_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/corner_away_icon"
+        app:layout_constraintEnd_toStartOf="@+id/corner_away_icon" />
+
+    <TextView
+        android:id="@+id/homeTeamScoreTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#8b007f"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#ffc5f8"
+        android:textSize="110sp"
+        app:layout_constraintBottom_toTopOf="@+id/middleGraphic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <TextView
+        android:id="@+id/awayTeamScoreTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#0078a2"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="#c5ffe1"
+        android:textSize="110sp"
+        app:layout_constraintBottom_toTopOf="@+id/middleGraphic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/decorative_graphic"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleGraphic"
+        app:srcCompat="@drawable/score_keeper_middle_test" />
+
+    <Button
+        android:id="@+id/bttnHomeCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_padding"
+        android:paddingStart="@dimen/team_button_no_padding"
+        android:text="@string/corner"
+        android:textAlignment="textEnd"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/bttnHomeRedCard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bttnHomeRedCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_padding"
+        android:paddingStart="@dimen/team_button_no_padding"
+        android:text="@string/red_card"
+        android:textAlignment="textEnd"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/bttnHomeYellowCard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bttnHomeYellowCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_padding"
+        android:paddingStart="@dimen/team_button_no_padding"
+        android:text="@string/yellow_card"
+        android:textAlignment="textEnd"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/bttnHomeGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_team_button_background_goal"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_padding"
+        android:paddingStart="@dimen/team_button_no_padding"
+        android:text="@string/goal"
+        android:textAlignment="textEnd"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttnHomeYellowCard" />
+
+    <Button
+        android:id="@+id/bttnAwayCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/away_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_no_padding"
+        android:paddingStart="@dimen/team_button_padding"
+        android:text="@string/corner"
+        android:textAlignment="textStart"
+        android:textColor="#555555"
+        app:layout_constraintBottom_toTopOf="@+id/bttnAwayRedCard"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bttnAwayRedCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/away_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_no_padding"
+        android:paddingStart="@dimen/team_button_padding"
+        android:text="@string/red_card"
+        android:textAlignment="textStart"
+        android:textColor="#555555"
+        app:layout_constraintBottom_toTopOf="@+id/bttnAwayYellowCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:clickable="false" />
+
+    <Button
+        android:id="@+id/bttnAwayYellowCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/away_team_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_no_padding"
+        android:paddingStart="@dimen/team_button_padding"
+        android:text="@string/yellow_card"
+        android:textAlignment="textStart"
+        android:textColor="#555555"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/bttnAwayGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/away_team_button_background_goal"
+        android:fontFamily="@font/montserrat_bold"
+        android:minWidth="@dimen/team_button_minimum_width"
+        android:paddingEnd="@dimen/team_button_no_padding"
+        android:paddingStart="@dimen/team_button_padding"
+        android:text="@string/goal"
+        android:textAlignment="textStart"
+        android:textColor="#555555"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttnAwayYellowCard" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/centre_icon_dimension"
+        android:layout_height="@dimen/centre_icon_dimension"
+        android:contentDescription="@string/corner_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bttnAwayRedCard"
+        app:layout_constraintEnd_toStartOf="@+id/bttnAwayCorner"
+        app:layout_constraintStart_toEndOf="@+id/bttnHomeCorner"
+        app:layout_constraintTop_toTopOf="@+id/bttnAwayCorner"
+        app:srcCompat="@drawable/score_keeper_corner_test" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/centre_icon_dimension"
+        android:layout_height="@dimen/centre_icon_dimension"
+        android:contentDescription="@string/red_card_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bttnAwayYellowCard"
+        app:layout_constraintEnd_toStartOf="@+id/bttnAwayRedCard"
+        app:layout_constraintStart_toEndOf="@+id/bttnHomeRedCard"
+        app:layout_constraintTop_toTopOf="@+id/bttnAwayRedCard"
+        app:srcCompat="@drawable/score_keeper_red_card_test" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/centre_icon_dimension"
+        android:layout_height="@dimen/centre_icon_dimension"
+        android:contentDescription="@string/yellow_car_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bttnAwayGoal"
+        app:layout_constraintEnd_toStartOf="@+id/bttnAwayYellowCard"
+        app:layout_constraintStart_toEndOf="@+id/bttnHomeYellowCard"
+        app:layout_constraintTop_toTopOf="@+id/bttnAwayYellowCard"
+        app:srcCompat="@drawable/score_keeper_yellow_card_test" />
+
+    <Button
+        android:id="@+id/resetBttn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/reset_button_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/reset"
+        android:textColor="#3dba08"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25790754" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/home"
+        android:textColor="#8b007f"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topGraphic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/topGraphic"
+        app:layout_constraintTop_toTopOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo_black"
+        android:text="@string/away"
+        android:textColor="#0078a2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/awayTeamScoreTextView"
+        app:layout_constraintEnd_toEndOf="@+id/topGraphic"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/team"
+        android:textColor="#8b007f"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topGraphic"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/team"
+        android:textColor="#0078a2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/awayTeamScoreTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/topGraphic"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
